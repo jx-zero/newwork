@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>找人才企业--我的--求职信息列表</title>
+		<!--移动端版本兼容 -->
+		<script type="text/javascript">
+			var phoneWidth = parseInt(window.screen.width);
+			var phoneScale = phoneWidth / 640;
+
+			var ua = navigator.userAgent;
+			if (/Android (\d+\.\d+)/.test(ua)) {
+				var version = parseFloat(RegExp.$1);
+				// andriod 2.3
+				if (version > 2.3) {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+					// andriod 2.3以上
+				} else {
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+				// 其他系统
+			} else {
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		</script>
+		<!--移动端版本兼容 end -->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--调用百度地图-->
+		<!--
+			请自行申请百度地图的api，ak是你的密钥
+			-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=B0nEFwOosA7VcMi5uBZ3lXfr"></script>
+		<!--jquery-->
+		<script src="js/jquery.js"></script>
+	</head>
+
+	<body>
+		<!--信息列表-->
+		<div class="result_article m-width">
+			<ul class="top_nav">
+				<li>
+					<a href="javscript:;" class="active">我收到的求职信息</a>
+				</li>
+				<li>
+					<a href="javascript:;">我的微招聘</a>
+				</li>
+			</ul>
+
+			<!--查看我收到的求职信息列表-->
+			<div class="result_list_job member ent_list_resume">
+				<ul class="member_list">
+					<li>
+						<a href="ent_view_resume.html">
+							<div class="member_list_top">
+								<h2>求职网页设计 两年工作经验</h2>
+								<p><span>岗位：网页美工</span><span>职业状态：待业</span>
+								</p>
+								<p><span>申请时间：2014-12-03</span><span>工社级别：<img src="img/ent/s_cap_5.gif" alt="" /></span>
+								</p>
+							</div>
+							<b>查看</b>
+						</a>
+					</li>
+					<li>
+						<a href="ent_view_resume.html">
+							<div class="member_list_top">
+								<h2>php程序员电商开发</h2>
+								<p><span>岗位：程序员 </span><span>职业状态：待业</span>
+								</p>
+								<p><span>申请时间：2014-12-03</span><span>工社级别：<img src="img/ent/s_blue_5.gif" alt="" /></span>
+								</p>
+							</div>
+							<b>查看</b>
+						</a>
+					</li>
+					<li>
+						<a href="ent_view_resume.html">
+							<div class="member_list_top">
+								<h2>应聘杭州网页美工</h2>
+								<p><span>岗位：网页美工 </span><span>职业状态：待业</span>
+								</p>
+								<p><span>申请时间：2014-12-03</span><span>工社级别：<img src="img/ent/s_red_5.gif" alt="" /></span>
+								</p>
+							</div>
+							<b>查看</b>
+						</a>
+					</li>
+					<li>
+						<a href="ent_view_resume.html">
+							<div class="member_list_top">
+								<h2>求职网页设计 两年工作经验</h2>
+								<p><span>岗位：网页美工</span><span>职业状态：待业</span>
+								</p>
+								<p><span>申请时间：2014-12-03</span><span>工社级别：<img src="img/ent/s_cap_5.gif" alt="" /></span>
+								</p>
+							</div>
+							<b>查看</b>
+						</a>
+					</li>
+					<li>
+						<a href="ent_view_resume.html">
+							<div class="member_list_top">
+								<h2>php程序员电商开发</h2>
+								<p><span>岗位：程序员 </span><span>职业状态：待业</span>
+								</p>
+								<p><span>申请时间：2014-12-03</span><span>工社级别：<img src="img/ent/s_blue_5.gif" alt="" /></span>
+								</p>
+							</div>
+							<b>查看</b>
+						</a>
+					</li>
+					<li>
+						<a href="ent_view_resume.html">
+							<div class="member_list_top">
+								<h2>应聘杭州网页美工</h2>
+								<p><span>岗位：网页美工 </span><span>职业状态：待业</span>
+								</p>
+								<p><span>申请时间：2014-12-03</span><span>工社级别：<img src="img/ent/s_red_5.gif" alt="" /></span>
+								</p>
+							</div>
+							<b>查看</b>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!--我的微招聘-->
+			<div class="result_list_net member" style="display: none;">
+				<ul class="member_list member_list_res">
+					<li>
+						<a href="ent_add_talent.html">
+							<div class="member_list_top">
+								<h2>求职网页设计 两年工作经验</h2>
+								<p>岗位：网页美工 <i>工作地点：杭州</i>
+								</p>
+								<p>发布时间：2014-11-26<i>薪资水平：6000元/月</i>
+								</p>
+
+							</div>
+						</a>
+						<div class="member_res_edit">
+							<a href=javascript:; " class="res_edit ">编辑</a>
+							<a href=javascript:;" class="res_del">删除</a>
+						</div>
+					</li>
+					<li>
+						<a href="ent_add_talent.html">
+							<div class="member_list_top">
+								<h2>求职网页设计 两年工作经验</h2>
+								<p>岗位：网页美工 <i>工作地点：杭州</i>
+								</p>
+								<p>发布时间：2014-11-26<i>薪资水平：6000元/月</i>
+								</p>
+
+							</div>
+						</a>
+						<div class="member_res_edit">
+							<a href=javascript:; " class="res_edit ">编辑</a>
+							<a href=javascript:;" class="res_del">删除</a>
+						</div>
+					</li>
+					<li>
+						<a href="ent_add_talent.html">
+							<div class="member_list_top">
+								<h2>求职网页设计 两年工作经验</h2>
+								<p>岗位：网页美工 <i>工作地点：杭州</i>
+								</p>
+								<p>发布时间：2014-11-26<i>薪资水平：6000元/月</i>
+								</p>
+
+							</div>
+						</a>
+						<div class="member_res_edit">
+							<a href=javascript:; " class="res_edit ">编辑</a>
+							<a href=javascript:;" class="res_del">删除</a>
+						</div>
+					</li>
+					<li>
+						<a href="ent_add_talent.html">
+							<div class="member_list_top">
+								<h2>求职网页设计 两年工作经验</h2>
+								<p>岗位：网页美工 <i>工作地点：杭州</i>
+								</p>
+								<p>发布时间：2014-11-26<i>薪资水平：6000元/月</i>
+								</p>
+
+							</div>
+						</a>
+						<div class="member_res_edit">
+							<a href=javascript:; " class="res_edit ">编辑</a>
+							<a href=javascript:;" class="res_del">删除</a>
+						</div>
+					</li>
+					<div class="result_button view_member">
+						<a href="ent_add_aut.html" class="result_a_btn ent_a_btn">我要认证</a>
+						<a href="ent_add_talent.html" class="result_a_btn ent_a_btn">我要招人</a>
+					</div>
+				</ul>
+			</div>
+
+
+		</div>
+		<!--底部的菜单-->
+		<nav class="m-width">
+			<ul>
+				<li><a href="ent_index.html"><i></i>雷达</a>
+				</li>
+				<li><a href="ent_view_post.html"><i></i>结果</a>
+					<!--结果数-->
+					<u id="rader_result">0</u>
+				</li>
+				<li class="active"><a href="ent_list_resume.html"><i></i>我的</a>
+				</li>
+			</ul>
+		</nav>		
+	</body>
+	<!--特效-->
+	<script src="js/model.js"></script>
+
+
+
+</html>

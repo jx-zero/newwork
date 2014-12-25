@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>找工作--结果查看页</title>
+		<!--移动端版本兼容 -->
+		<script type="text/javascript">
+			var phoneWidth = parseInt(window.screen.width);
+			var phoneScale = phoneWidth / 640;
+
+			var ua = navigator.userAgent;
+			if (/Android (\d+\.\d+)/.test(ua)) {
+				var version = parseFloat(RegExp.$1);
+				// andriod 2.3
+				if (version > 2.3) {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+					// andriod 2.3以上
+				} else {
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+				// 其他系统
+			} else {
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		</script>
+		<!--移动端版本兼容 end -->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--调用百度地图-->
+		<!--
+			请自行申请百度地图的api，ak是你的密钥
+			-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=B0nEFwOosA7VcMi5uBZ3lXfr"></script>
+		<!--jquery-->
+		<script src="js/jquery.js"></script>
+	</head>
+
+	<body>
+		<!--信息列表-->
+		<div class="result_list m-width">
+			<ul>
+				<li>
+					<a href="result_article.html">
+						<i>01</i>
+						<div class="result_list_head">
+							<h3>求职网页设计 两年工作经验</h3>
+							<p>杭州荣兴信息技术服务有限公司<u class="yangzheng"></u></p>
+							<p>发布时间：2014-12-23</p>
+						</div>
+						<div class="result_list_km">1.2km</div>
+						<b>投简历</b>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i>02</i>
+						<div class="result_list_head">
+							<h3>求职网页设计 两年工作经验</h3>
+							<p>杭州荣兴信息技术服务有限公司<u  class="yangzheng"></u></p>
+							<p>发布时间：2014-12-23</p>
+						</div>
+						<div class="result_list_km">1.2km</div>
+						<b>投简历</b>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i>03</i>
+						<div class="result_list_head">
+							<h3>求职网页设计 两年工作经验</h3>
+							<p>杭州荣兴信息技术服务有限公司</p>
+							<p>发布时间：2014-12-23</p>
+						</div>
+						<div class="result_list_km">1.2km</div>
+						<b>投简历</b>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--底部的菜单-->
+		<nav class="m-width">
+			<ul>
+				<li><a href="index.html"><i></i>雷达</a>
+				</li>
+				<li class="active"><a href="view_post.html"><i></i>结果</a>
+					<!--结果数-->
+					<u id="rader_result">0</u>
+				</li>
+				<li><a href="view_member.html"><i></i>我的</a>
+				</li>
+			</ul>
+		</nav>		
+	</body>
+	<!--特效-->
+	<script src="js/index.js"></script>
+	<!--baidu map-->
+	<script src="js/bdmap.js"></script>
+
+
+</html>

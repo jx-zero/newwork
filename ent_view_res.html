@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>找人才企业版--结果人才查看详细首页</title>
+		<!--移动端版本兼容 -->
+		<script type="text/javascript">
+			var phoneWidth = parseInt(window.screen.width);
+			var phoneScale = phoneWidth / 640;
+
+			var ua = navigator.userAgent;
+			if (/Android (\d+\.\d+)/.test(ua)) {
+				var version = parseFloat(RegExp.$1);
+				// andriod 2.3
+				if (version > 2.3) {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+					// andriod 2.3以上
+				} else {
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+				// 其他系统
+			} else {
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		</script>
+		<!--移动端版本兼容 end -->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--调用百度地图-->
+		<!--
+			请自行申请百度地图的api，ak是你的密钥
+			-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=B0nEFwOosA7VcMi5uBZ3lXfr"></script>
+		<!--jquery-->
+		<script src="js/jquery.js"></script>
+	</head>
+
+	<body>
+		<!--信息列表-->
+		<div class="post_member m-width">
+			<!--查看我收到的求职信息-->
+			<div class="result_list_net member view_resume">
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<th colspan="4">王子聪<i>(男，23岁)</i>
+						</th>
+					</tr>
+					<tr class="borderBottom">
+						<td>工作年限:</td>
+						<td class="td-width">2年</td>
+						<td>期望职位:</td>
+						<td class="td-width">网页设计师</td>
+					</tr>
+					<tr class="borderBottom">
+						<td>期望月薪:</td>
+						<td class="td-width">5000-8000元</td>
+						<td>期望地区:</td>
+						<td class="td-width">杭州-不限</td>
+					</tr>
+					<tr class="borderBottom">
+						<td>电话号码:</td>
+						<td class="td-width">13512345678</td>
+						<td>电子邮箱:</td>
+						<td class="td-width">12345@qq.com</td>
+					</tr>
+					<tr>
+						<td>自我介绍:</td>
+						<td colspan="3">
+							我来自山西临汾，于2011年7月份毕业于太原理工大学计 算机信息管理专业，能熟练运用Photoshop，Flash， Dreamweaver等主流设计制作软件； 精通html，熟练 掌握div+css布局。在工作中刻苦学习努力钻研，加上自 己高中时期的美术功底，独特的审美观念，成功的设计出 许多不错的网站。
+							<div class="view_resume_self">
+								<img src="img/self_1.jpg" alt="" />
+								<img src="img/self_1.jpg" alt="" />
+								<img src="img/self_1.jpg" alt="" />
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>激情宣言:</td>
+						<td colspan="3">
+							不要，不要在沉默中死亡，我要选择在爆发中毁灭，那样 可以省下一笔火葬费。这样当我的身体开始燃烧时，就可 以与激情来一支跳跃的华尔兹了。 </td>
+					</tr>
+					<tr class="borderBottom">
+						<td colspan="4">工作经验</td>
+					</tr>
+					<tr>
+						<td>工作时间:</td>
+						<td colspan="3" class="ent_fontSieze">2011年07月-至今[3年4个月]</td>
+					</tr>
+					<tr>
+						<td>企业名称:</td>
+						<td colspan="3" class="ent_fontSieze">杭州网络科技有限公司(私人企业)</td>
+					</tr>
+					<tr>
+						<td>在职职位:</td>
+						<td colspan="3" class="ent_fontSieze">网页美工</td>
+					</tr>
+					<tr>
+						<td>薪资水平:</td>
+						<td colspan="3" class="ent_fontSieze">3000-5000元/月</td>
+					</tr>
+					<tr>
+						<td>工作描述:</td>
+						<td colspan="3" class="ent_fontSieze">负责企业网站的前台页面设计与静态HTML页面切图，首页动画设计与制作等。</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!--底部的菜单-->
+		<nav class="m-width">
+			<ul>
+				<li><a href="ent_index.html"><i></i>雷达</a>
+				</li>
+				<li class="active"><a href="ent_view_post.html"><i></i>结果</a>
+					<!--结果数-->
+					<u id="rader_result">0</u>
+				</li>
+				<li><a href="ent_list_resume.html"><i></i>我的</a>
+				</li>
+			</ul>
+		</nav>
+	</body>
+	<!--特效-->
+	<script src="js/index.js"></script>
+	<!--baidu map-->
+	<script src="js/bdmap.js"></script>
+
+
+</html>

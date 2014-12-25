@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>找工作--结果详细查看页</title>
+		<!--移动端版本兼容 -->
+		<script type="text/javascript">
+			var phoneWidth = parseInt(window.screen.width);
+			var phoneScale = phoneWidth / 640;
+
+			var ua = navigator.userAgent;
+			if (/Android (\d+\.\d+)/.test(ua)) {
+				var version = parseFloat(RegExp.$1);
+				// andriod 2.3
+				if (version > 2.3) {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+					// andriod 2.3以上
+				} else {
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+				// 其他系统
+			} else {
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		</script>
+		<!--移动端版本兼容 end -->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--调用百度地图-->
+		<!--
+			请自行申请百度地图的api，ak是你的密钥
+			-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=B0nEFwOosA7VcMi5uBZ3lXfr"></script>
+		<!--jquery-->
+		<script src="js/jquery.js"></script>
+	</head>
+
+	<body>
+		<!--信息列表-->
+		<div class="result_article m-width">
+			<ul class="top_nav">
+				<li>
+					<a href="javascript:;" class="active">招聘详情</a>
+				</li>
+				<li>
+					<a href="javascript:;">公司介绍</a>
+				</li>
+			</ul>
+			
+			<!--招聘详情-->
+			<dl class="result_list_job member">
+				<dt>
+					<h1>招聘职位：修理工</h1>
+					<p>发布日期：2014-12-03&nbsp;&nbsp;&nbsp;&nbsp;（已有1228人浏览）</p>
+				</dt>
+				<dd>
+					<p>综合收入：5000～8000元</p>
+					<p>企业名称：杭州市阿里爸爸汽修厂</p>
+					<p>工作地点：海淀区中关村软件园<i id="result_map"></i>
+					</p>
+					<p>招聘人数：2人 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系电话：13512345678</p>
+				</dd>
+				<dt>
+					<h2>工作要求</h2>
+				</dt>
+				<dd>
+					<p>工作经验：2年 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学历：本科</p>
+					<p>年龄：25岁以下 &nbsp;&nbsp;&nbsp;&nbsp;性别：男</p>
+				</dd>
+				<dt>
+					<h2>福利待遇</h2>
+				</dt>
+				<dd>
+					<u>五险一金</u>
+					<u>年底双薪</u>
+					<u>周末双休</u>
+					<u>加班补助</u>
+					<u>交通补助</u>
+					<u>包住</u>
+					<u>餐补</u>
+					<u>话补</u>
+					<u>房补</u>
+				</dd>
+				<dt>
+					<h2>工作描述</h2>
+				</dt>
+				<dd>
+					<p>
+						1、对车辆进行日常保养、检查和维修；
+						<br /> 2、进行新车交车给客户前进行检查（PDI）；
+						<br /> 3、对工具、设备进行定期保养；
+						<br /> 4、按照车间主管安排工作任务及时完成。
+					</p>
+				</dd>
+				<dd>
+					<p class="result_footer">联系我时请说是在汽车工社看到的，谢谢！</p>
+				</dd>
+				<div class="result_button">
+					<a href="#" class="result_a_btn">申请岗位</a>
+					<a href="#" class="result_a_jb">我要举报</a>
+				</div>
+			</dl>
+			
+			<!--企业简介-->
+			<dl class="result_list_net member" style="display: none;">
+				<dt>
+					<h1>杭州市阿里爸爸汽修厂<i>已认证</i></h1>
+					<p>公司地点：海淀区中关村软件园</p>
+					<h2>公司简介</h2>
+				</dt>
+				<dd>
+					<p>汽车修理的基本方法可分为：就车修理和总成互换修理。就车 修理是在修理时对车上拆下的总成、组合件及零件，凡能修复的， 经修复后全部装回原车。总成互换修理法是除车架和本身外，其余 总成、组合件、零件都可利用备品库中的备用品进行换装。
+					</p>
+					<p>调整后，一般公务用车的排气量从2.0L降到1.8L，价格从25万 元降到16万元，此举符合国家降低行政成本，节能减排的方针政策 用品进行换装。
+					</p>
+				</dd>
+				<dt>
+					<h2>公司门店及前台照片</h2>
+				</dt>
+				<dd>
+					<ul class="ent_photo">
+						<li><img src="img/net_1.png" alt="" /><i>企业门头照片</i></li>
+						<li><img src="img/net_2.png" alt="" /><i>企业前台照片</i></li>
+						<li><img src="img/net_2.png" alt="" /><i>企业门头照片</i></li>
+						<li><img src="img/net_3.png" alt="" /><i>企业门头照片</i></li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		<!--底部的菜单-->
+		<nav class="m-width">
+			<ul>
+				<li><a href="index.html"><i></i>雷达</a>
+				</li>
+				<li class="active"><a href="view_post.html"><i></i>结果</a>
+					<!--结果数-->
+					<u id="rader_result">0</u>
+				</li>
+				<li><a href="view_member.html"><i></i>我的</a>
+				</li>
+			</ul>
+		</nav>
+	</body>
+	<!--特效-->
+	<script src="js/model.js"></script>
+
+
+
+</html>

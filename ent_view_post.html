@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>找人才企业版--结果查看页</title>
+		<!--移动端版本兼容 -->
+		<script type="text/javascript">
+			var phoneWidth = parseInt(window.screen.width);
+			var phoneScale = phoneWidth / 640;
+
+			var ua = navigator.userAgent;
+			if (/Android (\d+\.\d+)/.test(ua)) {
+				var version = parseFloat(RegExp.$1);
+				// andriod 2.3
+				if (version > 2.3) {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+					// andriod 2.3以上
+				} else {
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+				// 其他系统
+			} else {
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		</script>
+		<!--移动端版本兼容 end -->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--调用百度地图-->
+		<!--
+			请自行申请百度地图的api，ak是你的密钥
+			-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=B0nEFwOosA7VcMi5uBZ3lXfr"></script>
+		<!--jquery-->
+		<script src="js/jquery.js"></script>
+	</head>
+
+	<body>
+		<!--信息列表-->
+		<div class="result_list m-width">
+			<dl class="ent_view_post">
+				<dt>
+					<span>求职者</span>
+					<span>职业状态</span>
+					<span>工社级别</span>
+					<span></span>
+				</dt>
+				<dd>
+					<span><i class="ent_post">1</i>贺娜</span>
+					<span>待业</span>
+					<span><img src="img/ent/s_cap_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+				<dd>
+					<span><i class="ent_post">2</i>米丽萍</span>
+					<span>待业</span>
+					<span><img src="img/ent/s_red_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+				<dd>
+					<span><i class="ent_post">3</i>张新平</span>
+					<span>在职</span>
+					<span><img src="img/ent/s_blue_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+				<dd>
+					<span><i class="ent_post">4</i>贺娜</span>
+					<span>待业</span>
+					<span><img src="img/ent/s_cap_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+				<dd>
+					<span><i class="ent_post">5</i>米丽萍</span>
+					<span>待业</span>
+					<span><img src="img/ent/s_red_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+				<dd>
+					<span><i class="ent_post">6</i>张新平</span>
+					<span>在职</span>
+					<span><img src="img/ent/s_blue_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+				<dd>
+					<span><i class="ent_post">7</i>米丽萍</span>
+					<span>待业</span>
+					<span><img src="img/ent/s_red_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+				<dd>
+					<span><i class="ent_post">8</i>张新平</span>
+					<span>在职</span>
+					<span><img src="img/ent/s_blue_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+				<dd>
+					<span><i class="ent_post">9</i>贺娜</span>
+					<span>待业</span>
+					<span><img src="img/ent/s_cap_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+				<dd>
+					<span><i class="ent_post">10</i>米丽萍</span>
+					<span>待业</span>
+					<span><img src="img/ent/s_red_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+				<dd>
+					<span><i class="ent_post">11</i>张新平</span>
+					<span>在职</span>
+					<span><img src="img/ent/s_blue_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+				<dd>
+					<span><i class="ent_post">12</i>米丽萍</span>
+					<span>待业</span>
+					<span><img src="img/ent/s_red_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+				<dd>
+					<span><i class="ent_post">13</i>张新平</span>
+					<span>在职</span>
+					<span><img src="img/ent/s_blue_5.gif" alt="" /></span>
+					<span><a href="view_post_member.html">查看</a></span>
+				</dd>
+			</dl>
+		</div>
+		<!--底部的菜单-->
+		<nav class="m-width">
+			<ul>
+				<li><a href="ent_index.html"><i></i>雷达</a>
+				</li>
+				<li class="active"><a href="ent_view_post.html"><i></i>结果</a>
+					<!--结果数-->
+					<u id="rader_result">0</u>
+				</li>
+				<li><a href="ent_list_resume.html"><i></i>我的</a>
+				</li>
+			</ul>
+		</nav>		
+	</body>
+	<!--特效-->
+	<script src="js/index.js"></script>
+	<!--baidu map-->
+	<script src="js/bdmap.js"></script>
+
+
+</html>

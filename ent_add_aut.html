@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>找人才企业--我的--认证</title>
+		<!--移动端版本兼容 -->
+		<script type="text/javascript">
+			var phoneWidth = parseInt(window.screen.width);
+			var phoneScale = phoneWidth / 640;
+
+			var ua = navigator.userAgent;
+			if (/Android (\d+\.\d+)/.test(ua)) {
+				var version = parseFloat(RegExp.$1);
+				// andriod 2.3
+				if (version > 2.3) {
+					document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+					// andriod 2.3以上
+				} else {
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+				// 其他系统
+			} else {
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		</script>
+		<!--移动端版本兼容 end -->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--调用百度地图-->
+		<!--
+			请自行申请百度地图的api，ak是你的密钥
+			-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=B0nEFwOosA7VcMi5uBZ3lXfr"></script>
+		<!--jquery-->
+		<script src="js/jquery.js"></script>
+	</head>
+
+	<body>
+		<!--信息列表-->
+		<div class="result_article m-width">
+			<ul class="top_nav">
+				<li>
+					<a href="ent_list_resume.html">我收到的求职信息</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="active">我的微招聘</a>
+				</li>
+			</ul>
+
+			<!--查看我收到的求职信息列表-->
+			<div class="result_list_job member ent_list_resume" style="display: none;">
+				<ul class="member_list">
+					<li>
+						<a href="ent_view_resume.html">
+							<div class="member_list_top">
+								<h2>求职网页设计 两年工作经验</h2>
+								<p><span>岗位：网页美工</span><span>职业状态：待业</span>
+								</p>
+								<p><span>申请时间：2014-12-03</span><span>工社级别：<img src="img/ent/s_cap_5.gif" alt="" /></span>
+								</p>
+							</div>
+							<b>查看</b>
+						</a>
+					</li>
+					<li>
+						<a href="ent_view_resume.html">
+							<div class="member_list_top">
+								<h2>php程序员电商开发</h2>
+								<p><span>岗位：程序员 </span><span>职业状态：待业</span>
+								</p>
+								<p><span>申请时间：2014-12-03</span><span>工社级别：<img src="img/ent/s_blue_5.gif" alt="" /></span>
+								</p>
+							</div>
+							<b>查看</b>
+						</a>
+					</li>
+					<li>
+						<a href="ent_view_resume.html">
+							<div class="member_list_top">
+								<h2>应聘杭州网页美工</h2>
+								<p><span>岗位：网页美工 </span><span>职业状态：待业</span>
+								</p>
+								<p><span>申请时间：2014-12-03</span><span>工社级别：<img src="img/ent/s_red_5.gif" alt="" /></span>
+								</p>
+							</div>
+							<b>查看</b>
+						</a>
+					</li>
+					<li>
+						<a href="ent_view_resume.html">
+							<div class="member_list_top">
+								<h2>求职网页设计 两年工作经验</h2>
+								<p><span>岗位：网页美工</span><span>职业状态：待业</span>
+								</p>
+								<p><span>申请时间：2014-12-03</span><span>工社级别：<img src="img/ent/s_cap_5.gif" alt="" /></span>
+								</p>
+							</div>
+							<b>查看</b>
+						</a>
+					</li>
+					<li>
+						<a href="ent_view_resume.html">
+							<div class="member_list_top">
+								<h2>php程序员电商开发</h2>
+								<p><span>岗位：程序员 </span><span>职业状态：待业</span>
+								</p>
+								<p><span>申请时间：2014-12-03</span><span>工社级别：<img src="img/ent/s_blue_5.gif" alt="" /></span>
+								</p>
+							</div>
+							<b>查看</b>
+						</a>
+					</li>
+					<li>
+						<a href="ent_view_resume.html">
+							<div class="member_list_top">
+								<h2>应聘杭州网页美工</h2>
+								<p><span>岗位：网页美工 </span><span>职业状态：待业</span>
+								</p>
+								<p><span>申请时间：2014-12-03</span><span>工社级别：<img src="img/ent/s_red_5.gif" alt="" /></span>
+								</p>
+							</div>
+							<b>查看</b>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!--我的微招聘-->
+			<div class="result_list_net member">
+				<form id="ent_add_talent">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td>公司名称<span class="red">*</span>
+							</td>
+							<td>
+								<input type="text" name="ent_aut_name" id="ent_aut_name" required style="width: 50%;"/>
+								<span style="font-size: 1.5rem;">
+									必须与营业执照一样
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>公司地点<span class="red">*</span>
+							</td>
+							<td>
+								<input type="text" name="ent_aut_add" id="ent_aut_add" required/>
+							</td>
+						</tr>
+						<tr>
+							<td>公司简介<span class="red">*</span></td>
+							<td>
+								<textarea name="ent_aut_int" id="ent_aut_int" rows='5' required/></textarea>
+							</td>
+						</tr>						
+					</table>
+					<h2 class="res_h2">公司营业执照</h2>
+					<ul id="ent_license" class="res_intention ent_license">
+						<li>
+							<span><img src="img/net_2.png"/></span>
+						</li>
+						<li>
+							<span></span>
+							<i>上传本地照片</i>
+						</li>
+					</ul>
+					<h2 class="res_h2">公司门店及前台照片</h2>
+					<ul id="ent_license" class="res_intention ent_license">
+						<li>
+							<span><img src="img/net_2.png"/></span>
+							<i>上传前台照片</i>
+						</li>
+						<li>
+							<span></span>
+							<i>上传门头照片</i>
+						</li>
+						<li>
+							<span></span>
+							<i>上传车间照片</i>
+						</li>
+						<li>
+							<span></span>
+							<i>添加其它照片</i>
+						</li>
+					</ul>
+					<div class="result_button">
+						<button class="result_a_btn">提交认证</button>
+						<!--下面是为了防止再次提交-->
+						<input type="hidden" name="issub" id="issub" value="0">
+					</div>
+				</form>
+			</div>
+
+
+		</div>
+		<!--底部的菜单-->
+		<nav class="m-width">
+			<ul>
+				<li><a href="ent_index.html"><i></i>雷达</a>
+				</li>
+				<li><a href="ent_view_post.html"><i></i>结果</a>
+					<!--结果数-->
+					<u id="rader_result">0</u>
+				</li>
+				<li class="active"><a href="ent_list_resume.html"><i></i>我的</a>
+				</li>
+			</ul>
+		</nav>		
+	</body>
+	<!--特效-->
+	<script src="js/model.js"></script>
+
+
+
+</html>
